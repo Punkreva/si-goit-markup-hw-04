@@ -40,19 +40,6 @@ img {
   height: auto;
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
 .container {
   max-width: 1158px;
   padding-left: 15px;
@@ -64,8 +51,6 @@ img {
 .section {
   padding: 120px 0;
 }
-
-/* ===============================/COMMON STYLES=============================== */
 
 /* ===============================Header=============================== */
 
@@ -125,6 +110,23 @@ img {
 .nav-list-link:focus,
 .nav-list-link:active {
   color: #404bbf;
+}
+
+.underlined {
+  position: relative;
+  color: #404bbf;
+}
+
+.underlined::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #404bbf;
 }
 
 /* ===============================Contacts=============================== */
@@ -217,6 +219,19 @@ img {
 }
 
 /* ===============================Our-feature=============================== */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 
 .our-feature-list {
   display: flex;
